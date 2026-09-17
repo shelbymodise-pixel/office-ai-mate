@@ -1,4 +1,10 @@
-import type { ReactNode, SelectHTMLAttributes, InputHTMLAttributes, TextareaHTMLAttributes } from "react";
+import type {
+  ReactNode,
+  SelectHTMLAttributes,
+  InputHTMLAttributes,
+  ButtonHTMLAttributes,
+  TextareaHTMLAttributes,
+} from "react";
 
 const base =
   "w-full rounded-xl border border-white/12 bg-white/5 px-3.5 py-2.5 text-sm text-foreground placeholder:text-muted-foreground/70 outline-none transition focus:border-accent/60 focus:ring-2 focus:ring-accent/25";
@@ -50,7 +56,7 @@ export function PrimaryButton({
   children,
   loading,
   ...props
-}: InputHTMLAttributes<HTMLButtonElement> & { loading?: boolean; children: ReactNode }) {
+}: ButtonHTMLAttributes<HTMLButtonElement> & { loading?: boolean; children: ReactNode }) {
   return (
     <button
       type="button"
@@ -68,7 +74,7 @@ export function PrimaryButton({
 export function GhostButton({
   children,
   ...props
-}: InputHTMLAttributes<HTMLButtonElement> & { children: ReactNode }) {
+}: ButtonHTMLAttributes<HTMLButtonElement> & { children: ReactNode }) {
   return (
     <button
       type="button"
